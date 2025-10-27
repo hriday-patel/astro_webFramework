@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Main from "../components/Main.astro";
+import H1 from "../components/H1.astro";
+import PostItem from "../components/PostItem.astro";
+
+const posts = await getCollection("post");
+
+---
+
+<Layout title="Blog | Blogger">
+    <Header />
+    <Main>
+        <H1 text="Blogger Blogs"/>
+        <PostItem posts={posts} />
+    </Main>
+</Layout>
