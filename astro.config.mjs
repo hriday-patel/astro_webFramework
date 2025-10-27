@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 import netlify from '@astrojs/netlify';
 
+import vercel from '@astrojs/vercel';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -12,5 +14,5 @@ export default defineConfig({
   },
 
   output: 'server',
-  adapter: netlify()
+  adapter: vercel()
 });
